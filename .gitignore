@@ -1,0 +1,23 @@
+# Ignore config and venv folders
+config/
+venv/
+
+# Python-specific ignores
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment variations
+env/
+virtualenv/
+ENV/
+
+# Miscellaneous
+*.log
+*.pot
+*.pyc
+.DS_Store
