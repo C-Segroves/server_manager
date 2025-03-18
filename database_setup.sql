@@ -4,11 +4,12 @@ Drop Database If Exists server_manager;
 Create Database server_manager;
 
 CREATE TABLE IF NOT EXISTS servers (
-                    name VARCHAR(50) PRIMARY KEY,
+                    server_name VARCHAR(50) PRIMARY KEY,
+                    server_type VARCHAR(50) NOT NULL,
                     ip VARCHAR(15) NOT NULL,
                     port INTEGER NOT NULL
                 );
 
-INSERT INTO servers (name, ip, port)
-VALUES ('test_server', '192.168.1.108', 7777)
-ON CONFLICT (name) DO NOTHING;
+INSERT INTO servers (server_name,server_type, ip, port)
+VALUES ('test_server','test_server', '192.168.1.108', 7777)
+ON CONFLICT (server_name) DO NOTHING;
